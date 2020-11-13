@@ -129,5 +129,12 @@ public interface Tree<E> {
    */
   public int height();
 
+  /**
+   * Moves a folder or file to another position
+   *
+   * @param existingPosition - Position where the treeNode is currently
+   * @param newParent - Position of the new ascendent node
+   */
+  public void move(Position<E> existingPosition, Position<E> newParent);
   }
 

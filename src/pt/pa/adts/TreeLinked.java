@@ -261,6 +261,15 @@ public class TreeLinked<E> implements Tree<E> {
         return height(this.root);
     }
 
+    @Override
+    public void move(Position<E> existingPosition, Position<E> newParent) {
+        TreeNode existingNode = checkPosition(existingPosition);
+        TreeNode newParentNode = checkPosition(newParent);
+        TreeNode oldParentNode = existingNode.parent;
+        existingNode.parent = newParentNode;
+        newParentNode.children.add(existingNode);
+        oldParentNode.children.remove(existingNode);
+    }
 
     private String toStringPreOrder(Position<E> position) {
         String str = position.element().toString(); // visit (position)

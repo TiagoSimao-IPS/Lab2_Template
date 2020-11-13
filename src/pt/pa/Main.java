@@ -6,6 +6,7 @@
 package pt.pa;
 
 import pt.pa.model.BookmarkInvalidOperation;
+import pt.pa.model.BookmarkManager;
 
 /**
  *
@@ -17,7 +18,6 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*     take comments when BookmarkManager is implemented
         try {
             BookmarkManager manager = new BookmarkManager();
             
@@ -25,10 +25,13 @@ public class Main {
             manager.addBookmarkFolder("jornais", "Finanças");
             manager.addBookmarkFolder("bookmarks", "Redes Sociais");
             manager.addBookmarkFolder("bookmarks", "Diversos");
+            manager.addBookmarkFolder("jornais", "Desportivos");
             
             manager.addBookmarkEntry("jornais", "Publico", "http://www.publico.pt");
             manager.addBookmarkEntry("jornais", "Expresso", "http://www.expresso.pt");
             manager.addBookmarkEntry("finanças", "Diário Económico", "http://economico.sapo.pt/");
+            manager.addBookmarkEntry("Desportivos", "A Bola", "http://www.abola.pt");
+            manager.addBookmarkEntry("Desportivos", "Record", "http://www.record.xl.pt");
             
             manager.addBookmarkEntry("redes sociais", "Facebook", "http://www.facebook.com");
             manager.addBookmarkEntry("redes sociais", "Instagram", "http://www.instagram.com");
@@ -38,15 +41,12 @@ public class Main {
             
             manager.addBookmarkEntry("bookmarks", "IPS", "http://www.ips.pt");
 
-            System.out.println(manager);
+            System.out.println(manager.toString());
 
             System.exit(0);
 
         } catch (BookmarkInvalidOperation exception) {
             System.err.println(exception.getMessage());
         }
-
-         */
     }
-    
 }
